@@ -1,0 +1,28 @@
+numbers = [1, 2, 7, 9, 13, 45, 3, 15, 6, 21]
+saved_numbers = tuple(numbers)
+div_by_three = []
+no_div = []
+def divide_nums():
+    """This function determines is a number is divisible by three.
+    If yes, it will be addded to div_by_three. If no, if will be added
+    to no_div.
+
+    Arguments:
+        N/A
+
+    Returns:
+        None
+
+    Assumptions and Conditions:
+        A list must be provided with only integers
+    """
+    for i in numbers:
+        if(i % 3 == 0):
+            div_by_three.append(i)
+        else:
+            no_div.append(i)
+    print("numbers =", numbers)
+    print("div_by_three =", div_by_three)
+    print("no_div =", no_div)
+divide_nums()
+print("saved_numbers =", saved_numbers)
