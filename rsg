@@ -1,0 +1,58 @@
+import math
+import random
+def random_num():
+    """This function determines the area of a circle
+    with a random radius value
+
+        Arguments:
+            N/A
+
+        Returns:
+            None
+
+        Assumptions and Conditions:
+            The random module must provide a random number between 0 and 5
+        """
+    r_num = random.randint(0, 5)
+    print(r_num)
+    p = math.pi
+    random_area = p * math.pow(r_num, 2)
+    print("The random module randomly calculated an area of:", random_area)
+random_num()
+
+def see_name(user):
+    """ This function prints the users name and informs then they
+        have finished the midterm
+
+        Arguments:
+            user (string): Contains the users name
+
+        Returns:
+            None
+
+        Assumptions and Conditions:
+            The more_stuff function must call see_name
+            users must be a string
+        """
+    print("Hello", user + ",", "you have completed the midterm exam")
+
+def more_stuff():
+    """This function calculates the area of a circle with inputted numbers
+
+        Arguments:
+            N/A
+
+        Returns:
+            None
+
+        Assumptions and Conditions:
+             User must input an integer for diameter and radius
+        """
+    user_name = input("Enter your name:")
+    diameter = int(input("Enter in the length of the diameter of a circle:"))
+    radius = diameter / 2
+    p = math.pi
+    area = p * math.pow(radius, 2)
+    print("Thanks", user_name + ".", "The area of the circle is", area)
+    see_name(user_name)
+more_stuff()
